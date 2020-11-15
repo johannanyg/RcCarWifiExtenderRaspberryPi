@@ -7,6 +7,7 @@ echo "CHECK IF CONFIGURATION IS DONE"
 done=$(check_configure_done)
 if [ $done == "Empty" ]; then
     echo "CONFIGURATION NEVER DONE!!!"
+    next_command "mkdir -p original_files"
     copy_original_files_to_backup
 else
     echo "CONFIGURATION DONE BEFORE!!!"
